@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Indus Aviary</title>
+    <meta name="description" content="The page you are looking for could not be found. Return to Indus Aviary home to explore species care and available birds.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-wrapper {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-main);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: var(--header-height);
+        }
+
+        .error-text {
+            font-size: 8rem;
+            font-weight: 580; /* Match H1 typography weight, never 600+ */
+            color: var(--primary);
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
+            line-height: 1;
+            margin-bottom: 0;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .floating-element {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.08;
+            animation: float 10s infinite linear;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <a href="index.html" class="navbar-brand">
+                <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+            </a>
+
+            <nav class="d-none d-lg-flex align-items-center">
+                <ul class="d-flex align-items-center m-0 p-0" style="list-style:none; gap:20px;">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item py-2 px-3 small" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item py-2 px-3 small" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="species.html" class="nav-link">Species & Care</a></li>
+                    <li><a href="available-birds.html" class="nav-link">Available Birds</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link">Education</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+                <a href="login.html" class="btn-premium btn-sm">Login</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end bg-main" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column gap-3 mb-4">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+                <li class="nav-item"><a href="home-2.html" class="nav-link">Home 2</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Species & Care</a></li>
+                <li class="nav-item"><a href="available-birds.html" class="nav-link">Available Birds</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <a href="login.html" class="btn-premium w-100 text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Content -->
+    <div class="error-wrapper">
+        <!-- Decorative Floating Elements -->
+        <i class="bi bi-feather floating-element text-primary" style="font-size: 15rem; top: 10%; left: 10%;"></i>
+        <i class="bi bi-feather floating-element text-secondary" style="font-size: 10rem; bottom: 10%; right: 15%; animation-duration: 15s;"></i>
+
+        <div class="position-relative z-2">
+            <h1 class="error-text">404</h1>
+            <h2 class="display-5 fw-bold mb-3">Oops! Lost Bird</h2>
+            <p class="lead text-muted mb-5 mx-auto" style="max-width: 500px;">Looks like the page you are looking for has flown away. Let's guide you back to aviary safety.</p>
+            <a href="index.html" class="btn-premium px-5 py-3 fs-5"><i class="bi bi-house-door me-2"></i> Return Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="navbar-brand fs-3 fw-bold mb-3 d-block text-decoration-none">
+                        <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+                    </a>
+                    <p class="mb-4">Specialty breeders dedicated to raising hand-tamed, socially well-adjusted, health-guaranteed exotic companion birds.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="species.html">Species & Care</a></li>
+                        <li><a href="available-birds.html">Available Birds</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="adoption-inquiry.html">Adoption Inquiry</a></li>
+                        <li><a href="blog.html">Avian Education</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Receive care sheets, avian updates, and notification of hatched clutches.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control rounded-start-pill border-end-0"
+                            placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                <p class="mb-0">&copy; 2026 Indus Aviary. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to Top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+

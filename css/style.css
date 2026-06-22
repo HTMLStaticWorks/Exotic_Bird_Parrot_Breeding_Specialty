@@ -1,0 +1,1968 @@
+/* 
+ * Indus Aviary — Exotic Bird & Parrot Breeding Specialty
+ * Premium, Modern, Dark Mode Ready, Fully Responsive
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary: #0D9488;
+  --primary-hover: #0F766E;
+  --secondary: #D97706;
+  --accent: #F59E0B;
+  --success: #16A34A;
+
+  /* Light Theme Backgrounds */
+  --bg-main: #FAFAF9;
+  --bg-secondary: #F5F5F4;
+  --bg-card: #FFFFFF;
+  --text-main: #1C1917;
+  --text-muted: #78716C;
+  --border-color: #E7E5E4;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(250, 250, 249, 0.8);
+  --glass-border: rgba(28, 25, 23, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(28, 25, 23, 0.04);
+
+  /* Miscellaneous */
+  --font-family: 'Outfit', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --header-height: 80px;
+}
+
+[data-theme="dark"] {
+  --bg-main: #1C1917;
+  --bg-secondary: #292524;
+  --bg-card: #292524;
+  --text-main: #F5F5F4;
+  --text-muted: #A8A29E;
+  --border-color: #44403C;
+
+  --glass-bg: rgba(28, 25, 23, 0.85);
+  --glass-border: rgba(250, 250, 249, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html {
+  font-size: 16px;
+  /* standard base font size */
+}
+
+html,
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Typography System */
+h1,
+.h1 {
+  font-family: var(--font-family);
+  font-weight: 580;
+  /* Max weight — never 600+ */
+  font-size: clamp(3.0rem, 8vw, 4.5rem);
+  line-height: 1.15;
+  color: var(--text-main);
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+
+  h1,
+  .h1 {
+    font-size: 5.0rem;
+    /* 4.5 to 6 range */
+  }
+}
+
+h2,
+.h2 {
+  font-family: var(--font-family);
+  font-weight: 540;
+  /* Max weight — never 600+ */
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+
+  h2,
+  .h2 {
+    font-size: 3.6rem;
+    /* 3 to 4.5 range */
+  }
+}
+
+h3,
+.h3 {
+  font-family: var(--font-family);
+  font-weight: 520;
+  /* Max weight — never 600+ */
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  line-height: 1.25;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+
+  h3,
+  .h3 {
+    font-size: 2.4rem;
+    /* 2 to 3 range */
+  }
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  /* Subheading level */
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  line-height: 1.35;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+}
+
+p,
+body,
+.body-text {
+  font-family: var(--font-family);
+  font-weight: 410;
+  /* Comfortable reading range: 400-430 */
+  font-size: 1.05rem;
+  /* Comfortable reading: 14-19px (16.8px) */
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.lead,
+.subheading-text {
+  font-family: var(--font-family);
+  font-weight: 470;
+  /* Slightly heavier than body: 450-500 */
+  font-size: 1.3rem;
+  /* 18-24px (20.8px) */
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+strong,
+b,
+.fw-bold {
+  font-weight: 500 !important;
+  /* Max weight for inline emphasis is 500 */
+}
+
+/* Utilities */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.bg-main {
+  background-color: var(--bg-main) !important;
+}
+
+.bg-card {
+  background-color: var(--bg-card) !important;
+}
+
+@media (min-width: 768px) {
+  .w-md-50 {
+    width: 50% !important;
+  }
+}
+
+/* Forms */
+.form-control,
+.form-select {
+  color: var(--text-main) !important;
+}
+
+.form-select option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f5f5f4' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--text-main) !important;
+  box-shadow: none;
+  border-color: var(--primary);
+}
+
+/* Cards */
+.card {
+  color: var(--text-main) !important;
+}
+
+.card-title {
+  color: var(--text-main) !important;
+}
+
+/* Buttons */
+.btn-premium {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 510;
+  /* Button text: 500-520 */
+  font-size: 1rem;
+  /* 0.9-1.2rem range */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25);
+  transition: var(--transition);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary));
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(13, 148, 136, 0.35);
+  color: #fff;
+}
+
+.btn-premium:hover::before {
+  opacity: 1;
+}
+
+.btn-outline-premium {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-weight: 510;
+  /* Button text: 500-520 */
+  font-size: 1rem;
+  /* 0.9-1.2rem range */
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-outline-premium:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Glass Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 1000;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: var(--font-family) !important;
+  font-weight: 500 !important;
+  font-size: 1.75rem !important;
+  /* Matches fs-3 */
+  color: var(--primary) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0;
+  text-decoration: none !important;
+}
+
+.navbar-brand i {
+  font-size: 1.2em !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Breakpoints for brand logo and name size consistency (1024px, 768px, 360px) */
+@media (max-width: 1024px) {
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.35rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-brand {
+    font-size: 1.2rem !important;
+    gap: 8px !important;
+  }
+}
+
+.header .nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 16px !important;
+  border-radius: 30px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.header .nav-link:hover {
+  background-color: rgba(13, 148, 136, 0.05);
+  color: var(--primary) !important;
+}
+
+.header .nav-link.active {
+  background-color: rgba(13, 148, 136, 0.08) !important;
+  border-color: rgba(13, 148, 136, 0.2) !important;
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .header .nav-link:hover {
+  background-color: rgba(13, 148, 136, 0.1);
+}
+
+[data-theme="dark"] .header .nav-link.active {
+  background-color: rgba(13, 148, 136, 0.15) !important;
+  border-color: rgba(13, 148, 136, 0.3) !important;
+}
+
+/* Header Toggles & Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header .btn-premium {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+/* Header Controls Group (Border around RTL and Theme Toggle) */
+.header-controls-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border-color);
+  padding: 4px 6px;
+  border-radius: 50px;
+  background: var(--bg-card);
+  transition: var(--transition);
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.header-controls-group .theme-toggle,
+.header-controls-group .rtl-toggle {
+  background: transparent !important;
+  border: none !important;
+  color: var(--text-main) !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: none !important;
+}
+
+.header-controls-group .theme-toggle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50% !important;
+  font-size: 1.05rem;
+}
+
+.header-controls-group .rtl-toggle {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 50px !important;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.header-controls-group .theme-toggle:hover,
+.header-controls-group .rtl-toggle:hover {
+  background-color: var(--primary) !important;
+  color: #fff !important;
+  transform: translateY(0) !important;
+}
+
+.theme-toggle,
+.rtl-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover,
+.rtl-toggle:hover {
+  color: var(--primary);
+}
+
+/* Mobile Menu & Responsiveness */
+@media (max-width: 1199px) {
+  .header nav ul {
+    gap: 8px !important;
+  }
+
+  .header .nav-link {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header .btn-premium {
+    padding: 0 14px;
+    font-size: 0.9rem;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .header-controls-group {
+    height: 38px;
+    padding: 2px 4px;
+  }
+
+  .header-controls-group .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .header-controls-group .rtl-toggle {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-actions {
+    display: none;
+    /* Hide in normal flow on mobile */
+  }
+}
+
+/* Offcanvas Hamburger Menu Styling */
+.offcanvas-body .nav {
+  align-items: center;
+}
+
+.offcanvas-body .nav-item {
+  width: 100%;
+  text-align: center;
+}
+
+.offcanvas-body .nav-link {
+  display: block;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-weight: 480;
+  transition: var(--transition);
+}
+
+.offcanvas-body .nav-link:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: rgba(13, 148, 136, 0.02);
+}
+
+.offcanvas-body .nav-link.active {
+  background-color: rgba(13, 148, 136, 0.08) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  font-weight: 510;
+}
+
+/* Offcanvas hamburger menu equal length (width) & height alignment */
+.offcanvas-body .header-controls-group {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 48px !important;
+  padding: 4px 6px !important;
+  border-radius: 50px !important;
+  box-sizing: border-box !important;
+  margin: 0 auto;
+}
+
+.offcanvas-body .header-controls-group .theme-toggle,
+.offcanvas-body .header-controls-group .rtl-toggle {
+  flex: 1 !important;
+  height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50px !important;
+  font-size: 0.95rem !important;
+}
+
+.offcanvas-body .header-controls-group .theme-toggle {
+  width: auto !important;
+}
+
+.offcanvas-body .btn-premium {
+  height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.section-title h2 span {
+  color: var(--primary);
+}
+
+.section-title p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Hero Template */
+.hero-wrapper {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-secondary);
+  padding: 60px 0 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-widget h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-widget h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
+}
+
+[dir="rtl"] .footer-widget h4::after {
+  left: auto;
+  right: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+[dir="rtl"] .footer-links li a:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 99;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTop:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+[dir="rtl"] #backToTop {
+  right: auto;
+  left: 30px;
+}
+
+/* Animations Core Classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.zoom-in.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+
+.stagger-4 {
+  transition-delay: 0.4s;
+}
+
+/* Accordion Theme Fix */
+.accordion {
+  --bs-accordion-color: var(--text-main);
+  --bs-accordion-bg: transparent;
+  --bs-accordion-btn-color: var(--text-main);
+  --bs-accordion-btn-bg: transparent;
+  --bs-accordion-active-color: var(--primary);
+  --bs-accordion-active-bg: rgba(13, 148, 136, 0.05);
+  --bs-accordion-border-color: var(--border-color);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed)::after {
+  filter: none;
+}
+
+/* Dropdown Menu styling */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0 !important;
+  }
+}
+
+.dropdown-menu {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--glass-shadow) !important;
+  margin-top: 10px !important;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  color: var(--text-main) !important;
+  font-weight: 450;
+  transition: var(--transition);
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background-color: rgba(13, 148, 136, 0.08) !important;
+  color: var(--primary) !important;
+}
+
+/* Authentication Page Styles */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--bg-main);
+  background-image: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.07), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(217, 119, 6, 0.05), transparent 45%);
+  padding: 80px 20px;
+}
+
+/* Auth Controls (Theme and RTL) at Top Right */
+.auth-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+[dir="rtl"] .auth-controls {
+  right: auto;
+  left: 20px;
+}
+
+.btn-auth-action {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.btn-auth-action.theme-toggle,
+.btn-auth-action.rtl-toggle {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  font-size: 1rem !important;
+  color: var(--text-main) !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.btn-auth-action.theme-toggle:hover,
+.btn-auth-action.rtl-toggle:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+  transform: translateY(-2px) !important;
+}
+
+.btn-auth-action.rtl-toggle {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+}
+
+.auth-card {
+  max-width: 480px;
+  width: 100%;
+}
+
+.auth-card a {
+  transition: var(--transition);
+}
+
+.auth-card a:hover {
+  color: var(--primary-hover) !important;
+  text-decoration: underline !important;
+}
+
+.auth-card a.navbar-brand:hover {
+  text-decoration: none !important;
+  opacity: 0.9;
+}
+
+.auth-card a.navbar-brand i {
+  transition: var(--transition);
+}
+
+.auth-card a.navbar-brand:hover i {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.password-field-wrapper {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--primary) !important;
+  transform: translateY(-50%) scale(1.15);
+}
+
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 15px;
+}
+
+[dir="rtl"] .password-toggle-btn:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+.social-login-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.social-login-btn i {
+  transition: transform 0.2s ease;
+}
+
+.social-login-btn:hover {
+  background: rgba(13, 148, 136, 0.05) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  transform: translateY(-2px);
+}
+
+.social-login-btn:hover i {
+  transform: scale(1.2);
+}
+
+/* Pricing Featured Card - Mobile Fix */
+@media (max-width: 991px) {
+  .glass-card[style*="scale(1.05)"] {
+    transform: scale(1) !important;
+  }
+}
+
+/* Hero Floating Element Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* CTA Glow Pulse Animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(13, 148, 136, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 40px rgba(13, 148, 136, 0.5);
+  }
+}
+
+/* Responsive Footer heading limits & BackToTop overrides */
+@media (max-width: 1200px) {
+  .footer-widget h4 {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #backToTop {
+    bottom: 15px !important;
+    right: 15px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 0.9rem !important;
+  }
+
+  [dir="rtl"] #backToTop {
+    right: auto !important;
+    left: 15px !important;
+  }
+
+  .footer-bottom {
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+  }
+}
+
+/* ==========================================================================
+   Education & Details Page Centering Tweaks
+   ========================================================================== */
+
+/* Center all content on Education (blog.html) page */
+.page-education #articlesGrid .glass-card,
+.page-education #articlesGrid .card {
+  text-align: center !important;
+}
+
+.page-education #articlesGrid .glass-card .p-4,
+.page-education #articlesGrid .card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.page-education #articlesGrid .position-absolute.z-2 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.page-education #articlesGrid .position-absolute.z-2 .d-flex {
+  justify-content: center !important;
+}
+
+.page-education #articlesGrid .card .p-4.pt-0 {
+  text-align: center !important;
+}
+
+/* Increase the image card height on education page (responsive overrides) */
+/* Default / Desktop (e.g. 1440px) */
+.page-education #articlesGrid .card-img-top,
+.page-education #articlesGrid .glass-card img:not(.rounded-circle) {
+  height: 440px !important;
+  object-fit: cover !important;
+}
+
+.page-education #articlesGrid .col-lg-8 .glass-card {
+  min-height: 640px !important;
+}
+
+/* Tablet (around 768px) */
+@media (max-width: 991px) {
+
+  .page-education #articlesGrid .card-img-top,
+  .page-education #articlesGrid .glass-card img:not(.rounded-circle) {
+    height: 480px !important;
+  }
+
+  .page-education #articlesGrid .col-lg-4 img {
+    height: 520px !important;
+    /* Specific increase for Understanding Parrot Body Language image */
+  }
+
+  .page-education #articlesGrid .col-lg-8 .glass-card {
+    min-height: 600px !important;
+  }
+}
+
+/* Mobile (around 360px) */
+@media (max-width: 576px) {
+
+  .page-education #articlesGrid .card-img-top,
+  .page-education #articlesGrid .glass-card img:not(.rounded-circle) {
+    height: 350px !important;
+  }
+
+  .page-education #articlesGrid .col-lg-8 .glass-card {
+    min-height: 490px !important;
+  }
+}
+
+/* Center all headings, subheadings, and card content on Blog Details (blog-details.html) page */
+.page-blog-details .glass-card {
+  text-align: center !important;
+}
+
+.page-blog-details .glass-card h2,
+.page-blog-details .glass-card h5,
+.page-blog-details .glass-card h6,
+.page-blog-details .glass-card p,
+.page-blog-details .glass-card span {
+  text-align: center !important;
+}
+
+.page-blog-details .glass-card ul {
+  list-style-position: inside !important;
+  padding-left: 0 !important;
+  text-align: center !important;
+}
+
+.page-blog-details .glass-card li {
+  text-align: center !important;
+}
+
+.page-blog-details .glass-card blockquote {
+  text-align: center !important;
+}
+
+.page-blog-details .glass-card blockquote footer {
+  text-align: center !important;
+}
+
+/* Sidebar navigation menu links: left-aligned (straight vertical line) */
+.page-blog-details #guidesSidebar .nav-link {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+[dir="rtl"] .page-blog-details #guidesSidebar .nav-link {
+  text-align: right !important;
+  justify-content: flex-end !important;
+}
+
+/* Sidebar Need Expert Help button: single line at 1024px */
+.page-blog-details .col-lg-3 .btn-premium {
+  white-space: nowrap !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  font-size: 0.85rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.page-blog-details .article-panel {
+  text-align: center !important;
+}
+
+.page-blog-details .article-panel img {
+  display: block !important;
+  margin: 0 auto 1.5rem auto !important;
+  height: 650px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+@media (max-width: 991px) {
+  .page-blog-details .article-panel img {
+    height: 540px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-blog-details .article-panel img {
+    height: 340px !important;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .page-blog-details #trainingPanel img,
+  .page-blog-details #hormonesPanel img {
+    height: 780px !important;
+  }
+}
+
+.page-blog-details .article-panel .bg-secondary,
+.page-blog-details .article-panel .border-danger {
+  text-align: center !important;
+}
+
+.page-blog-details .article-panel .bg-secondary ul,
+.page-blog-details .article-panel .border-danger ul {
+  list-style-position: inside !important;
+  padding-left: 0 !important;
+}
+
+/* Center all headings, subheadings, and content on Species Details (species-details.html) page */
+.page-species-details h2,
+.page-species-details h5,
+.page-species-details p,
+.page-species-details span,
+.page-species-details .small {
+  text-align: center !important;
+}
+
+.page-species-details .badge {
+  display: inline-block !important;
+  margin: 0 auto 1rem auto !important;
+}
+
+.page-species-details .mt-4 {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 15px !important;
+}
+
+.page-species-details .fade-left img,
+.page-species-details .fade-right img {
+  display: block !important;
+  margin: 0 auto !important;
+  height: 650px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+@media (max-width: 991px) {
+
+  .page-species-details .fade-left img,
+  .page-species-details .fade-right img {
+    height: 540px !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .page-species-details .fade-left img,
+  .page-species-details .fade-right img {
+    height: 340px !important;
+  }
+}
+
+/* Subpages Hero Height Increase overrides */
+.page-about .hero-wrapper {
+  min-height: 900px !important;
+}
+
+.page-care .hero-wrapper {
+  min-height: 900px !important;
+}
+
+.page-adoption .hero-wrapper {
+  min-height: 900px !important;
+}
+
+.page-gallery .hero-wrapper {
+  min-height: 900px !important;
+}
+
+.page-education .hero-wrapper {
+  min-height: 900px !important;
+}
+
+.page-contact .hero-wrapper {
+  min-height: 900px !important;
+}
+
+/* Decrease hero section height on mobile (360px viewport) */
+@media (max-width: 600px) {
+
+  .page-about .hero-wrapper,
+  .page-care .hero-wrapper,
+  .page-adoption .hero-wrapper,
+  .page-gallery .hero-wrapper,
+  .page-education .hero-wrapper,
+  .page-contact .hero-wrapper {
+    min-height: 360px !important;
+  }
+}
+
+/* Subpages Hero Height Increase overrides for Details Pages */
+.page-species-details .hero-wrapper,
+.page-blog-details .hero-wrapper {
+  min-height: 900px !important;
+}
+
+/* Decrease hero section height on mobile (360px viewport) for Details Pages */
+@media (max-width: 600px) {
+
+  .page-species-details .hero-wrapper,
+  .page-blog-details .hero-wrapper {
+    min-height: 360px !important;
+  }
+}
+
+/* Hide headers and footers on details pages to show only contents */
+.page-species-details header,
+.page-species-details footer,
+.page-species-details #mobileMenu,
+.page-blog-details header,
+.page-blog-details footer,
+.page-blog-details #mobileMenu {
+  display: none !important;
+}
+
+/* Premium Glassmorphism Modal for Details Popups */
+#detailsPopupModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 2000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#detailsPopupModal.show {
+  display: flex;
+  opacity: 1;
+}
+
+#detailsPopupModal .modal-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 85%;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#detailsPopupModal.show .modal-container {
+  transform: scale(1);
+}
+
+#detailsPopupModal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  background: var(--bg-main);
+}
+
+#detailsPopupModal .modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.7);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2100;
+  transition: var(--transition);
+}
+
+#detailsPopupModal .modal-close-btn:hover {
+  background: var(--primary);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Ensure body scroll is locked when modal is open */
+body.modal-open {
+  overflow: hidden !important;
+}
+
+@media (max-width: 600px) {
+  #detailsPopupModal {
+    padding: 10px;
+  }
+
+  #detailsPopupModal .modal-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  #detailsPopupModal .modal-close-btn {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Increase height of 2nd and 3rd socialization images on 1440px desktop */
+@media (min-width: 1400px) {
+  .page-gallery .enrichment-sub-img {
+    height: 380px !important;
+  }
+}
+
+/* Center all content on Adoption (available-birds.html) page */
+.page-adoption .section-title {
+  text-align: center !important;
+}
+
+.page-adoption #birdsGrid .card {
+  text-align: center !important;
+}
+
+.page-adoption #birdsGrid .card .p-4 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.page-adoption #birdsGrid .card ul {
+  padding-left: 0 !important;
+  display: inline-block !important;
+  text-align: start !important;
+  margin: 0 auto 1.5rem auto !important;
+  width: auto !important;
+}
+
+.page-adoption #birdsGrid .card li {
+  text-align: start !important;
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Default card image height for available birds */
+.page-adoption #birdsGrid .card-img-top {
+  height: 280px !important;
+  object-fit: cover !important;
+}
+
+/* Increase bird card image height on desktop (1440px) */
+@media (min-width: 1400px) {
+  .page-adoption #birdsGrid .card-img-top {
+    height: 380px !important;
+  }
+}
+
+/* Center all headings, subheadings, paragraphs, and card titles on Care (species.html) page */
+.page-care h1,
+.page-care h2,
+.page-care h3,
+.page-care h4,
+.page-care h5,
+.page-care p,
+.page-care .lead,
+.page-care .section-title p {
+  text-align: center !important;
+}
+
+/* Override: restore footer to normal (left-aligned) on Care page — matching Adoption page footer */
+.page-care footer h4,
+.page-care footer h5,
+.page-care footer p {
+  text-align: left !important;
+}
+
+[dir="rtl"] .page-care footer h4,
+[dir="rtl"] .page-care footer h5,
+[dir="rtl"] .page-care footer p {
+  text-align: right !important;
+}
+
+.page-care footer .footer-widget h4::after {
+  left: 0 !important;
+  right: auto !important;
+}
+
+[dir="rtl"] .page-care footer .footer-widget h4::after {
+  left: auto !important;
+  right: 0 !important;
+}
+
+.page-care footer .social-icons {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .page-care footer .social-icons {
+  justify-content: flex-end !important;
+}
+
+.page-care .badge {
+  display: block !important;
+  width: max-content !important;
+  margin: 0 auto 1rem auto !important;
+}
+
+.page-care #species-list .card h4 {
+  text-align: center !important;
+}
+
+.page-care #species-list .card .p-4 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+@media (min-width: 768px) {
+  .w-md-40 {
+    width: 40% !important;
+  }
+
+  .page-care #species-list .card .p-4 {
+    width: 60% !important;
+    flex-grow: 1 !important;
+  }
+}
+
+.page-care #species-list .card .p-4 div {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.page-care #species-list .card .p-4 .d-flex {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.page-care #species-list .card ul {
+  width: 100% !important;
+}
+
+/* Ensure buttons in species card are of the same length */
+.page-care #species-list .card .btn {
+  width: 100% !important;
+}
+
+/* Decrease the image height on 1024px viewport in Exotic Breeds We Nurture section */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .page-care #species-list .card img {
+    min-height: 200px !important;
+    height: 200px !important;
+  }
+}
+
+/* ==========================================================================
+   Redesigned Premium Species Cards for Care Page
+   ========================================================================== */
+
+.species-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: relative;
+  width: 100%;
+}
+
+.species-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(13, 148, 136, 0.3);
+  box-shadow: 0 20px 40px rgba(13, 148, 136, 0.08),
+    0 1px 3px rgba(13, 148, 136, 0.05);
+}
+
+[data-theme="dark"] .species-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(13, 148, 136, 0.15);
+}
+
+/* Card Image Wrapper with overlay effects */
+.species-card .card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Increased image height for tablet and desktop views (768px and up) */
+@media (min-width: 768px) {
+  .species-card .card-image-wrapper {
+    height: 420px;
+  }
+}
+
+.species-card .card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.species-card:hover .card-image-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Glassmorphic Badge overlaid on Image */
+.species-card .image-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(13, 148, 136, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 510;
+  letter-spacing: 0.5px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+}
+
+[dir="rtl"] .species-card .image-badge {
+  left: auto;
+  right: 15px;
+}
+
+/* Card Content Area */
+.species-card .card-info-area {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Typography elements */
+.species-card h4 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  text-align: left !important;
+}
+
+[dir="rtl"] .species-card h4 {
+  text-align: right !important;
+}
+
+/* Custom layout for key-value care metrics */
+.species-card .metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0 24px 0;
+  padding: 16px 0;
+  border-top: 1px dashed var(--border-color);
+  border-bottom: 1px dashed var(--border-color);
+  width: 100%;
+}
+
+.species-card .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.species-card .metric-label {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.species-card .metric-label i {
+  font-size: 1.1rem;
+  color: var(--primary);
+  width: 20px;
+  text-align: center;
+}
+
+.species-card .metric-val {
+  color: var(--text-main);
+  font-weight: 500;
+  max-width: 60%;
+  text-align: right;
+}
+
+[dir="rtl"] .species-card .metric-val {
+  text-align: left;
+}
+
+/* Premium Card Buttons */
+.species-card .card-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.species-card .card-actions .btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  height: 42px;
+  white-space: nowrap;
+}
+
+/* Ensure buttons fit perfectly side-by-side on very small screens (like 360px) */
+@media (max-width: 380px) {
+  .species-card .card-actions {
+    gap: 8px;
+  }
+  
+  .species-card .card-actions .btn {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+    gap: 4px;
+  }
+}
+
+/* ==========================================================================
+   Global Button Standardization
+   ========================================================================== */
+/* If a section has more than one button, ensure they are equal width and single line */
+section .d-flex:has(> [class*="btn-"]:nth-of-type(2)) > [class*="btn-"] {
+  flex: 1;
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specifically center home-2 hero buttons */
+.page-home .hero-wrapper .d-flex,
+.page-home .dark-hero .d-flex {
+  justify-content: center !important;
+}
+
+/* Stack hero buttons one-by-one on small mobile screens */
+@media (max-width: 576px) {
+  .page-home .hero-wrapper .d-flex,
+  .page-home .dark-hero .d-flex {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  /* Stagger the hero images beautifully on mobile so they don't hide each other */
+  .hero-floating-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    min-height: auto !important;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .hero-floating-container .glass-card {
+    position: static !important;
+    width: 160px !important;
+    animation: none !important;
+  }
+
+  .hero-floating-container .glass-card:nth-child(2) {
+    margin-top: 40px;
+  }
+}
+
+/* ==========================================================================
+   Home Page Global Centering (Index & Home-2)
+   ========================================================================== */
+
+/* Center everything inside sections on the home pages */
+.page-home section {
+  text-align: center !important;
+}
+
+.page-home section h1,
+.page-home section h2,
+.page-home section h3,
+.page-home section h4,
+.page-home section h5,
+.page-home section h6,
+.page-home section p,
+.page-home section span,
+.page-home section .badge,
+.page-home section a,
+.page-home section button {
+  text-align: center !important;
+}
+
+/* Force flex utilities to center content on home pages */
+.page-home .hero-buttons,
+.page-home section .card-actions,
+.page-home section .card-body {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Ensure flex columns center items horizontally, but clutch cards can push buttons to the bottom */
+.page-home section .d-flex.flex-column {
+  align-items: center !important;
+}
+
+.page-home section .clutch-card,
+.page-home section .species-card {
+  justify-content: space-between !important;
+}
+
+/* Override existing start/left alignments specifically on home pages */
+.page-home .text-start,
+.page-home .text-md-start,
+.page-home .text-lg-start,
+.page-home section[style*="text-align: left"] {
+  text-align: center !important;
+}
+
+.page-home .justify-content-start,
+.page-home .justify-content-md-start,
+.page-home .justify-content-lg-start {
+  justify-content: center !important;
+}
+
+/* Ensure cards and internal elements inside home page sections are centered */
+.page-home section .card,
+.page-home section .glass-card,
+.page-home section .species-card,
+.page-home section .card-info-area {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Specific fix for metric lists inside cards to ensure they are centered */
+.page-home section .metrics-list {
+  align-items: center !important;
+}
+
+.page-home section .metric-row {
+  justify-content: center !important;
+  gap: 16px;
+}

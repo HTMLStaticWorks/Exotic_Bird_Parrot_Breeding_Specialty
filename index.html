@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand-Raised Exotic Birds & Parrots | Indus Aviary</title>
+    <meta name="description" content="Dedicated to ethical aviculture, hand-raising, and socializing exotic companion parrots. Explore available birds and care guides.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Preload above-the-fold hero image -->
+    <link rel="preload" as="image" href="images/hero_bg.png">
+</head>
+
+<body class="page-home">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <a href="index.html" class="navbar-brand">
+                <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+            </a>
+
+            <nav class="d-none d-lg-flex align-items-center">
+                <ul class="d-flex align-items-center m-0 p-0" style="list-style:none; gap:20px;">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item py-2 px-3 small active" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item py-2 px-3 small" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="species.html" class="nav-link">Care</a></li>
+                    <li><a href="available-birds.html" class="nav-link">Adoption</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+                <a href="login.html" class="btn-premium btn-sm">Login</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end bg-main" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column gap-3 mb-4">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home 1</a></li>
+                <li class="nav-item"><a href="home-2.html" class="nav-link">Home 2</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Care</a></li>
+                <li class="nav-item"><a href="available-birds.html" class="nav-link">Adoption</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <a href="login.html" class="btn-premium w-100 text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Premium Hero (Parallax + Floating Elements) -->
+    <section class="hero-wrapper"
+        style="background-image: url('images/hero_bg.png');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-left">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Ethical Breeding Specialty</span>
+                    <h1 class="display-3 fw-bold text-white mb-4">Nurturing Hand-Raised <span
+                            class="text-primary">Exotic Parrots</span></h1>
+                    <p class="lead text-white-50 mb-5">At Indus Aviary, we raise healthy, fully socialized, and DNA-tested exotic birds. Explore our strict care sheets and find your lifelong companion.</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="available-birds.html" class="btn-premium">Available Birds <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <!-- Floating Elements Simulation -->
+                <div class="col-lg-6 fade-right position-relative mt-5 mt-lg-0 hero-floating-container" style="min-height: 400px;">
+                    
+                    <div class="glass-card position-absolute"
+                        style="bottom: 10%; left: 10%; width: 250px; animation: float 8s ease-in-out infinite reverse;">
+                        <img src="images/cockatoo.png" class="img-fluid rounded mb-2" alt="Cockatoo" loading="lazy" decoding="async">
+                        <h6 class="mb-1">Galah Cockatoo</h6>
+                        <p class="small text-warning mb-0"><i class="bi bi-clock-history"></i> Hatchling Pending</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Breeding Categories -->
+    <section class="bg-main py-5">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Explore Specialty <span>Breeds</span></h2>
+                <p>Nurtured in our state-of-the-art facility under absolute veterinary alignment.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-up stagger-1">
+                    <a href="species.html#macaws" class="text-decoration-none">
+                        <div class="glass-card p-0 overflow-hidden text-center h-100">
+                            <img src="images/macaw.png"
+                                class="img-fluid w-100" style="height: 250px; object-fit: cover;" alt="Macaws" loading="lazy" decoding="async">
+                            <div class="p-4">
+                                <h4 class="text-main mb-0">Large Macaws</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 fade-up stagger-2">
+                    <a href="species.html#african-greys" class="text-decoration-none">
+                        <div class="glass-card p-0 overflow-hidden text-center h-100">
+                            <img src="images/african_grey.png"
+                                class="img-fluid w-100" style="height: 250px; object-fit: cover;" alt="African Greys" loading="lazy" decoding="async">
+                            <div class="p-4">
+                                <h4 class="text-main mb-0">African Greys</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 fade-up stagger-3">
+                    <a href="species.html#cockatoos" class="text-decoration-none">
+                        <div class="glass-card p-0 overflow-hidden text-center h-100">
+                            <img src="images/cockatoo.png"
+                                class="img-fluid w-100" style="height: 250px; object-fit: cover;"
+                                alt="Cockatoos" loading="lazy" decoding="async">
+                            <div class="p-4">
+                                <h4 class="text-main mb-0">Cockatoos & Conures</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Available Birds Highlight -->
+    <section class="bg-secondary py-5">
+        <div class="container">
+            <div class="section-title zoom-in">
+                <h2>Featured Available <span>Companion Birds</span></h2>
+                <p>Socialized daily, weaned onto solid diets, and DNA-tested.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Bird Card 1 -->
+                <div class="col-lg-4 col-md-6 zoom-in stagger-1">
+                    <div class="card bg-card border-0 shadow-sm h-100 rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="images/macaw.png"
+                                class="card-img-top" style="height: 240px; object-fit: cover;" alt="Rio" loading="lazy" decoding="async">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Rio</h5>
+                                    <span class="badge bg-success">Available</span>
+                                </div>
+                                <p class="text-primary small mb-3">Blue & Gold Macaw</p>
+                                <ul class="list-unstyled text-muted small mb-0">
+                                    <li><i class="bi bi-calendar3"></i> Hatched: Feb 12, 2026</li>
+                                    <li><i class="bi bi-gender-ambiguous"></i> Male (DNA Sexed)</li>
+                                    <li><i class="bi bi-emoji-laughing"></i> Personality: Highly curious & playful</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <a href="adoption-inquiry.html?name=Rio&breed=macaw" class="btn btn-outline-premium w-100">Inquire to Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bird Card 2 -->
+                <div class="col-lg-4 col-md-6 zoom-in stagger-2">
+                    <div class="card bg-card border-0 shadow-sm h-100 rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="images/african_grey.png"
+                                class="card-img-top" style="height: 240px; object-fit: cover;" alt="Coco" loading="lazy" decoding="async">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Coco</h5>
+                                    <span class="badge bg-success">Available</span>
+                                </div>
+                                <p class="text-primary small mb-3">Congo African Grey</p>
+                                <ul class="list-unstyled text-muted small mb-0">
+                                    <li><i class="bi bi-calendar3"></i> Hatched: Jan 25, 2026</li>
+                                    <li><i class="bi bi-gender-ambiguous"></i> Female (DNA Sexed)</li>
+                                    <li><i class="bi bi-emoji-laughing"></i> Personality: Vocal intellectual</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <a href="adoption-inquiry.html?name=Coco&breed=grey" class="btn btn-outline-premium w-100">Inquire to Adopt</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bird Card 3 -->
+                <div class="col-lg-4 col-md-6 zoom-in stagger-3">
+                    <div class="card bg-card border-0 shadow-sm h-100 rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="images/cockatoo.png"
+                                class="card-img-top" style="height: 240px; object-fit: cover;" alt="Lola" loading="lazy" decoding="async">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Lola</h5>
+                                    <span class="badge bg-warning text-dark">Pending</span>
+                                </div>
+                                <p class="text-primary small mb-3">Galah Cockatoo</p>
+                                <ul class="list-unstyled text-muted small mb-0">
+                                    <li><i class="bi bi-calendar3"></i> Hatched: Mar 02, 2026</li>
+                                    <li><i class="bi bi-gender-ambiguous"></i> Female (DNA Sexed)</li>
+                                    <li><i class="bi bi-emoji-laughing"></i> Personality: Sweet & extremely cuddly</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <button class="btn btn-outline-secondary w-100" disabled>Adoption Pending</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. How Adoption Works (Timeline Reveal) -->
+    <section class="bg-main py-5">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Our Responsible <span>Adoption</span> Process</h2>
+                <p>Steps we take to guarantee alignment between owners and our hand-raised birds.</p>
+            </div>
+            <div class="row position-relative">
+                <div class="col-md-3 text-center fade-up stagger-1">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                        style="width:80px; height:80px; font-size:2rem; font-weight: 500;">1</div>
+                    <h5 class="fw-bold">Educate & Choose</h5>
+                    <p class="small text-muted">Read care requirements and consult with us to select the appropriate species.</p>
+                </div>
+                <div class="col-md-3 text-center fade-up stagger-2">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                        style="width:80px; height:80px; font-size:2rem; font-weight: 500;">2</div>
+                    <h5 class="fw-bold">Application Inquiry</h5>
+                    <p class="small text-muted">Complete our responsible adoption form detailing your home environment and safety.</p>
+                </div>
+                <div class="col-md-3 text-center fade-up stagger-3">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                        style="width:80px; height:80px; font-size:2rem; font-weight: 500;">3</div>
+                    <h5 class="fw-bold">Review & Match</h5>
+                    <p class="small text-muted">Our avian breeding specialists review cage setups and household alignment.</p>
+                </div>
+                <div class="col-md-3 text-center fade-up stagger-4">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                        style="width:80px; height:80px; font-size:2rem; font-weight: 500;">4</div>
+                    <h5 class="fw-bold">Transition & Support</h5>
+                    <p class="small text-muted">Secure aviary pickup or climate transport, backed by lifetime dietary and training support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Customer Reviews -->
+    <section class="bg-secondary py-5">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Client <span>Testimonials</span></h2>
+                <p>Real stories of families who adopted their lifelong feathered companions.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 fade-up stagger-1">
+                    <div class="glass-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex text-warning mb-3">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="fst-italic text-muted">"Our African Grey, Coco, has been a blessing. Her social skills are incredible, thanks to the early hand-raising and training at Indus. The ongoing support has been invaluable."</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 pt-3 mt-auto">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle"
+                                style="width: 50px; height: 50px; object-fit: cover;" alt="User">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                                <small class="text-muted">Adopted African Grey</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up stagger-2">
+                    <div class="glass-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex text-warning mb-3">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="fst-italic text-muted">"Their responsible process was refreshing. They actually verified my cage setup and gave us a comprehensive diet sheet. Sunny is the sweetest Sun Conure."</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 pt-3 mt-auto">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle"
+                                style="width: 50px; height: 50px; object-fit: cover;" alt="User">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Mike Thompson</h6>
+                                <small class="text-muted">Adopted Sun Conure</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-up stagger-3">
+                    <div class="glass-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex text-warning mb-3">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="fst-italic text-muted">"Indus Aviary operates at an exceptional veterinary standard. The health guarantee and DNA results were provided, and our bird arrived well-adjusted."</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 pt-3 mt-auto">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle"
+                                style="width: 50px; height: 50px; object-fit: cover;" alt="User">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Amanda Clark</h6>
+                                <small class="text-muted">Adopted Galah Cockatoo</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA (Glow Pulse) -->
+    <section class="py-5 bg-main text-center position-relative">
+        <div class="container">
+            <div class="glass-card p-5 mx-auto" style="max-width: 800px; animation: glowPulse 3s infinite alternate;">
+                <h2 class="display-5 fw-bold mb-3">Ready for a Lifelong Companion?</h2>
+                <p class="lead mb-4 text-muted">Our hand-raised clutches hatch throughout the season. Take the first step by learning their care sheets or submitting an inquiry form.</p>
+                <a href="adoption-inquiry.html" class="btn-premium btn-lg">Submit Adoption Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Custom Request CTA -->
+    <section class="py-5 text-center bg-secondary">
+        <div class="container py-4 fade-up">
+            <h2 class="fw-bold mb-3">Have Specific Questions?</h2>
+            <p class="lead mb-4 text-muted">Get in touch with our avicultural specialists to discuss housing setups or diet formulations.</p>
+            <a href="contact.html" class="btn-outline-premium px-5">Contact Aviary Specialists</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="navbar-brand fs-3 fw-bold mb-3 d-block text-decoration-none">
+                        <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+                    </a>
+                    <p class="mb-4">Specialty breeders dedicated to raising hand-tamed, socially well-adjusted, health-guaranteed exotic companion birds.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="species.html">Species & Care</a></li>
+                        <li><a href="available-birds.html">Available Birds</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="adoption-inquiry.html">Adoption Inquiry</a></li>
+                        <li><a href="blog.html">Avian Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Receive care sheets, avian updates, and notification of hatched clutches.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control rounded-start-pill border-end-0"
+                            placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                <p class="mb-0">&copy; 2026 Indus Aviary. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to Top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+

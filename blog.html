@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avian Education & Husbandry Articles | Indus Aviary</title>
+    <meta name="description" content="Read educational articles written by our aviculturists on parrot diets, positive reinforcement training, body language, and cage setup.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body class="page-education">
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <a href="index.html" class="navbar-brand">
+                <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+            </a>
+
+            <nav class="d-none d-lg-flex align-items-center">
+                <ul class="d-flex align-items-center m-0 p-0" style="list-style:none; gap:20px;">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item py-2 px-3 small" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item py-2 px-3 small" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="species.html" class="nav-link">Care</a></li>
+                    <li><a href="available-birds.html" class="nav-link">Adoption</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+                <a href="login.html" class="btn-premium btn-sm">Login</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end bg-main" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column gap-3 mb-4">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+                <li class="nav-item"><a href="home-2.html" class="nav-link">Home 2</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Care</a></li>
+                <li class="nav-item"><a href="available-birds.html" class="nav-link">Adoption</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <a href="login.html" class="btn-premium w-100 text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <section class="hero-wrapper"
+        style="background-image: url('https://zoo.kyiv.ua/wp-content/uploads/2025/04/australian_king_parrot_male_4737-1140x445.jpg'); min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center pt-5 mt-5">
+            <h1 class="display-3 fw-bold text-white fade-up">Avian <span class="text-primary">Blog Portal</span></h1>
+            <p class="lead text-white-50 fade-up stagger-1">Empowering prospective and current parrot owners with professional insights.</p>
+        </div>
+    </section>
+
+    <!-- Featured & All Articles Section -->
+    <section class="bg-main py-5">
+        <div class="container">
+            <div class="section-title fade-up text-center mb-4">
+                <h2>Avian Education <span>Husbandry Guides</span></h2>
+                <p class="text-muted mb-0">Professional advice on species diets, positive conditioning, and safety setups.</p>
+            </div>
+
+            <!-- Filter Bar & Search -->
+            <div class="row g-4 align-items-center mb-5 fade-up">
+                <div class="col-lg-8">
+                    <div class="d-flex gap-2 flex-wrap justify-content-center" id="blogCategories">
+                        <button class="btn btn-outline-premium btn-sm filter-btn active" data-filter="all">All Articles</button>
+                        <button class="btn btn-outline-premium btn-sm filter-btn" data-filter="nutrition">Diet & Nutrition</button>
+                        <button class="btn btn-outline-premium btn-sm filter-btn" data-filter="behavior">Body & Behavior</button>
+                        <button class="btn btn-outline-premium btn-sm filter-btn" data-filter="habitat">Habitat & Setup</button>
+                        <button class="btn btn-outline-premium btn-sm filter-btn" data-filter="training">Training & Taming</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-card border-secondary text-muted"><i class="bi bi-search"></i></span>
+                        <input type="text" id="blogSearch" class="form-control bg-card border-secondary" placeholder="Search husbandry guides...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-md-center justify-content-lg-start" id="articlesGrid">
+                <!-- Article 1 (Featured Nutrition) -->
+                <div class="col-lg-8 article-item fade-up" data-category="nutrition" data-title="Parrot Nutrition & Chop Preparation">
+                    <div class="glass-card p-0 overflow-hidden h-100 position-relative text-white" 
+                        style="background: url('images/macaw.png') center/cover; min-height: 400px;">
+                        <div class="position-absolute w-100 h-100 top-0 start-0" style="background: linear-gradient(to top, rgba(28,25,23,0.95), transparent);"></div>
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4 p-md-5 z-2">
+                            <span class="badge bg-primary mb-3">Diet & Nutrition</span>
+                            <h2 class="fw-bold mb-3"><a href="blog-details.html#nutrition" class="text-white text-decoration-none">The Ultimate Guide to Parrot Nutrition & Chop Preparation</a></h2>
+                            <p class="text-white-50 d-none d-md-block">Why a seed-only diet is a silent killer for companion birds, and how to prepare a high-nutrient daily vegetable chop.</p>
+                            <div class="d-flex align-items-center gap-3 mt-3">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" style="width:40px; height:40px; object-fit: cover;" alt="Author">
+                                <span class="small">By Dr. Laura Vance • June 15, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 (Behavior / Body Language) -->
+                <div class="col-lg-4 article-item fade-up" data-category="behavior" data-title="Understanding Parrot Body Language: Eye Pinning & Flapping">
+                    <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+                        <img src="https://www.thoroughlytravel.com/wp-content/uploads/2025/11/scarlet-macaw-couple-preening-1024x768.jpg" class="w-100" style="height: 200px; object-fit: cover;" alt="African Grey" loading="lazy" decoding="async">
+                        <div class="p-4 bg-card flex-grow-1 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="fw-bold"><a href="blog-details.html#body-language" class="text-main text-decoration-none">Understanding Parrot Body Language</a></h5>
+                                <p class="small text-muted mb-3">Read your parrot's subtle physical cues to establish deep trust and prevent biting.</p>
+                            </div>
+                            <a href="blog-details.html#body-language" class="text-primary fw-bold text-decoration-none small mt-3">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 (Habitat Setup) -->
+                <div class="col-lg-4 col-md-6 article-item fade-up" data-category="habitat" data-title="Designing the Ideal Play & Cage Habitat">
+                    <div class="card bg-card border-0 shadow-sm h-100 rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="https://media.istockphoto.com/id/1243410279/photo/portrait-of-two-cute-cuddling-budgies-perched-on-branch-with-blue-background-as-symbol-of.jpg?s=612x612&w=0&k=20&c=d3YXfJpe6GS1qqs6V-bQVQpLNKv2Dd6Yvh7unm1KeGU=" class="card-img-top" style="height:200px; object-fit:cover;" alt="Habitat Setup" loading="lazy" decoding="async">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-3"><a href="blog-details.html#habitat" class="text-main text-decoration-none">Designing the Ideal Play & Cage Habitat</a></h5>
+                                <p class="small text-muted">Why perch variation is critical to foot health, and how to place toys to encourage natural foraging behaviors.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <a href="blog-details.html#habitat" class="text-primary fw-bold text-decoration-none small">Read Guide <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 (Training) -->
+                <div class="col-lg-4 col-md-6 article-item fade-up" data-category="training" data-title="Positive Reinforcement & Step-Up Training">
+                    <div class="card bg-card border-0 shadow-sm h-100 rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="images/umbrella.png" class="card-img-top" style="height:200px; object-fit:cover;" alt="Training" loading="lazy" decoding="async">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-3"><a href="blog-details.html#training" class="text-main text-decoration-none">Positive Reinforcement & Step-Up Training</a></h5>
+                                <p class="small text-muted">Step-by-step methods to build trust, introduce flight recall, and handle hormonal behaviors with rewards.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <a href="blog-details.html#training" class="text-primary fw-bold text-decoration-none small">Read Guide <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 (Behavior / Hormones) -->
+                <div class="col-lg-4 col-md-6 article-item fade-up" data-category="behavior" data-title="Managing Hormonal & Screaming Behaviors">
+                    <div class="card bg-card border-0 shadow-sm h-100 rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="images/cockatoo.png" class="card-img-top" style="height:200px; object-fit:cover;" alt="Socialization" loading="lazy" decoding="async">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-3"><a href="blog-details.html#hormones" class="text-main text-decoration-none">Managing Hormonal & Screaming Behaviors</a></h5>
+                                <p class="small text-muted">Establish dark hours sleep schedules and environmental resets to keep companion birds emotionally stable.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <a href="blog-details.html#hormones" class="text-primary fw-bold text-decoration-none small">Read Guide <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-5 bg-primary text-center text-white">
+        <div class="container py-4 fade-up">
+            <h2 class="text-white fw-bold mb-3">Join Our Avian Education List</h2>
+            <p class="text-white-50 mb-4 mx-auto" style="max-width: 600px;">Receive monthly dietary chop recipes, behavioral advice, veterinary guidelines, and direct notifications of new clutches.</p>
+            <form class="d-flex justify-content-center mx-auto" style="max-width: 500px;">
+                <input type="email" class="form-control rounded-start-pill border-0 py-3 px-4" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-secondary text-white rounded-end-pill px-4" style="background: var(--secondary); border: none;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="navbar-brand fs-3 fw-bold mb-3 d-block text-decoration-none">
+                        <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+                    </a>
+                    <p class="mb-4">Specialty breeders dedicated to raising hand-tamed, socially well-adjusted, health-guaranteed exotic companion birds.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="species.html">Species & Care</a></li>
+                        <li><a href="available-birds.html">Available Birds</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="adoption-inquiry.html">Adoption Inquiry</a></li>
+                        <li><a href="blog.html">Avian Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Receive care sheets, avian updates, and notification of hatched clutches.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control rounded-start-pill border-end-0"
+                            placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                <p class="mb-0">&copy; 2026 Indus Aviary. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to Top"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Blog search and category filter script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('blogSearch');
+            const categoryBtns = document.querySelectorAll('#blogCategories .filter-btn');
+            const articleItems = document.querySelectorAll('#articlesGrid .article-item');
+
+            let currentCategory = 'all';
+            let searchQuery = '';
+
+            // Category filter click handler
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    currentCategory = btn.getAttribute('data-filter');
+                    filterArticles();
+                });
+            });
+
+            // Search query handler
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                filterArticles();
+            });
+
+            function filterArticles() {
+                articleItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const itemTitle = item.getAttribute('data-title').toLowerCase();
+
+                    const matchesCategory = (currentCategory === 'all' || itemCategory === currentCategory);
+                    const matchesSearch = (itemTitle.includes(searchQuery));
+
+                    if (matchesCategory && matchesSearch) {
+                        item.style.display = 'block';
+                        // Re-trigger layout anims
+                        item.classList.add('in-view');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Aviary & Breeding Ethics | Indus Aviary</title>
+    <meta name="description" content="Learn about Indus Aviary's mission, our hand-raising protocols, our board-certified avian vet partnership, and our team.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body class="page-about">
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <a href="index.html" class="navbar-brand">
+                <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+            </a>
+
+            <nav class="d-none d-lg-flex align-items-center">
+                <ul class="d-flex align-items-center m-0 p-0" style="list-style:none; gap:20px;">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item py-2 px-3 small" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item py-2 px-3 small" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="species.html" class="nav-link">Care</a></li>
+                    <li><a href="available-birds.html" class="nav-link">Adoption</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+                <a href="login.html" class="btn-premium btn-sm">Login</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end bg-main" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column gap-3 mb-4">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home 1</a></li>
+                <li class="nav-item"><a href="home-2.html" class="nav-link">Home 2</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="species.html" class="nav-link">Species & Care</a></li>
+                <li class="nav-item"><a href="available-birds.html" class="nav-link">Available Birds</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                <div class="header-controls-group">
+                    <button class="theme-toggle" aria-label="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
+                    <button class="rtl-toggle" aria-label="Toggle RTL">RTL</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <a href="login.html" class="btn-premium w-100 text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <section class="hero-wrapper"
+        style="background-image: url('images/umbrella.png'); min-height: 60vh;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center pt-5 mt-5">
+            <h1 class="display-3 fw-bold text-white fade-up">Our <span class="text-primary">Story & Ethics</span></h1>
+            <p class="lead text-white-50 fade-up stagger-1">Raising healthy, hand-tamed, socially well-adjusted companion birds since 2012.</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="bg-main py-5 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-right">
+                    <img src="images/macaw.png"
+                        class="img-fluid rounded-4 shadow-lg" alt="Aviary Facility" loading="lazy" decoding="async">
+                </div>
+                <div class="col-lg-6 fade-left text-center">
+                    <h2 class="fw-bold mb-4">Dedicated to Ethical <span class="text-primary">Aviculture</span></h2>
+                    <p>What started as a small, passionate breeding interest in 2012 has evolved into a premier specialty aviary. We realized early on that many companion birds face behavioral and health challenges due to poor breeding practices and lack of early socialization. Our goal was to change that standard.</p>
+                    <p>Today, <strong>Indus Aviary</strong> operates a state-of-the-art breeding facility designed with strict quarantine parameters, advanced air filtration systems, and spacious nurseries. We raise our birds under direct veterinary guidelines, focusing on hand-raising, positive reinforcement conditioning, and weaning them onto diverse, nutritious diets.</p>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <h3 class="text-primary fw-bold">14+</h3>
+                            <p class="small text-muted">Years Exp.</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="text-primary fw-bold">450+</h3>
+                            <p class="small text-muted">Placed Birds</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="text-primary fw-bold">100%</h3>
+                            <p class="small text-muted">DNA Sexed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-secondary py-5">
+        <div class="container text-center">
+            <div class="section-title fade-up">
+                <h2>Our <span>Commitments</span></h2>
+                <p>Standard practices that set us apart as ethical breeders.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 zoom-in stagger-1">
+                    <div class="glass-card h-100">
+                        <i class="bi bi-shield-check text-primary display-4 mb-3"></i>
+                        <h5>Health Guaranteed</h5>
+                        <p class="small text-muted">All birds undergo veterinary screen, DNA testing, and disease panels before adoption.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 zoom-in stagger-2">
+                    <div class="glass-card h-100">
+                        <i class="bi bi-heart text-primary display-4 mb-3"></i>
+                        <h5>Early Socialization</h5>
+                        <p class="small text-muted">Chicks are acclimated to children, sounds, harness training, and general household activities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 zoom-in stagger-3">
+                    <div class="glass-card h-100">
+                        <i class="bi bi-apple text-primary display-4 mb-3"></i>
+                        <h5>Weaned to Chop</h5>
+                        <p class="small text-muted">Nurtured to eat dynamic diets: fresh vegetable chop, sprouted grains, and organic pellets.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 zoom-in stagger-4">
+                    <div class="glass-card h-100">
+                        <i class="bi bi-telephone-outbound text-primary display-4 mb-3"></i>
+                        <h5>Lifetime Consulting</h5>
+                        <p class="small text-muted">Our aviarists are always available to assist you with diet changes, behavior, and cage layout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team & Operations -->
+    <section class="bg-main py-5">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Meet Our <span>Specialists</span></h2>
+                <p>The dedicated professionals who care for our clutches daily.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4 fade-up stagger-1">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle mb-3 shadow"
+                        style="width: 150px; height: 150px; object-fit: cover;" alt="Jonathan West">
+                    <h5>Jonathan West</h5>
+                    <p class="text-primary small fw-bold">Founder & Head Aviculturist</p>
+                </div>
+                <div class="col-md-4 fade-up stagger-2">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3 shadow"
+                        style="width: 150px; height: 150px; object-fit: cover;" alt="Dr. Laura Vance">
+                    <h5>Dr. Laura Vance, DVM</h5>
+                    <p class="text-primary small fw-bold">Avian Veterinary Partner</p>
+                </div>
+                <div class="col-md-4 fade-up stagger-3">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3 shadow"
+                        style="width: 150px; height: 150px; object-fit: cover;" alt="Maria Thorne">
+                    <h5>Maria Thorne</h5>
+                    <p class="text-primary small fw-bold">Nursery & Socialization Lead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5 overflow-hidden bg-secondary">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 fade-right">
+                    <h2 class="fw-bold mb-4 text-center">Our <span class="text-primary">Mission & Vision</span></h2>
+                    <p class="lead text-muted mb-4 text-center">We are dedicated to elevating the standard of aviculture and promoting responsible ownership for exotic birds.</p>
+
+                    <div class="d-flex mb-4">
+                        <div class="bg-primary text-white rounded p-3 me-4 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <i class="bi bi-bullseye fs-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold">Our Mission</h4>
+                            <p class="text-muted mb-0">To raise the healthiest, most stable, and well-socialized companion parrots, ensuring their seamless transition into educated, lifelong matching homes.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="bg-primary text-white rounded p-3 me-4 d-flex align-items-center justify-content-center"
+                            style="width: 60px; height: 60px;">
+                            <i class="bi bi-eye fs-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold">Our Vision</h4>
+                            <p class="text-muted mb-0">To be a globally trusted benchmark for ethical specialty aviculture, veterinary health alignment, and owner education, reducing the number of displaced birds.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-left">
+                    <img src="images/conure.png"
+                        class="img-fluid rounded-4 shadow-lg w-100" style="height: 500px; object-fit: cover;"
+                        alt="Sun Conure" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="navbar-brand fs-3 fw-bold mb-3 d-block text-decoration-none">
+                        <i class="bi bi-feather text-primary"></i> <span class="text-primary">Indus</span> <span class="text-main">Aviary</span>
+                    </a>
+                    <p class="mb-4">Specialty breeders dedicated to raising hand-tamed, socially well-adjusted, health-guaranteed exotic companion birds.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="species.html">Species & Care</a></li>
+                        <li><a href="available-birds.html">Available Birds</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-widget">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="adoption-inquiry.html">Adoption Inquiry</a></li>
+                        <li><a href="blog.html">Avian Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Receive care sheets, avian updates, and notification of hatched clutches.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control rounded-start-pill border-end-0"
+                            placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+                <p class="mb-0">&copy; 2026 Indus Aviary. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to Top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
