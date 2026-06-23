@@ -1855,6 +1855,13 @@ section .d-flex:has(> [class*="btn-"]:nth-of-type(2)) > [class*="btn-"] {
   justify-content: center;
 }
 
+/* Fix home-1 hero overlapping fixed header and center contents */
+.page-home .hero-wrapper {
+  padding-top: calc(var(--header-height) + 60px) !important;
+  padding-bottom: 80px !important;
+  min-height: auto !important;
+}
+
 /* Specifically center home-2 hero buttons */
 .page-home .hero-wrapper .d-flex,
 .page-home .dark-hero .d-flex {
@@ -1863,6 +1870,13 @@ section .d-flex:has(> [class*="btn-"]:nth-of-type(2)) > [class*="btn-"] {
 
 /* Stack hero buttons one-by-one on small mobile screens */
 @media (max-width: 576px) {
+  .hero-wrapper,
+  .dark-hero {
+    min-height: auto !important;
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
+  }
+
   .page-home .hero-wrapper .d-flex,
   .page-home .dark-hero .d-flex {
     flex-direction: column !important;
@@ -1957,6 +1971,15 @@ section .d-flex:has(> [class*="btn-"]:nth-of-type(2)) > [class*="btn-"] {
   text-align: center !important;
 }
 
+/* Enforce full-width direct children and images inside companion bird cards to prevent left/right gaps */
+.page-home section .card > div {
+  width: 100% !important;
+}
+
+.page-home section .card img {
+  width: 100% !important;
+}
+
 /* Specific fix for metric lists inside cards to ensure they are centered */
 .page-home section .metrics-list {
   align-items: center !important;
@@ -1965,4 +1988,101 @@ section .d-flex:has(> [class*="btn-"]:nth-of-type(2)) > [class*="btn-"] {
 .page-home section .metric-row {
   justify-content: center !important;
   gap: 16px;
+}
+
+/* Vertically straight alignment for membership points inside homepage2 cards */
+.membership-list {
+  text-align: start !important;
+  display: inline-block !important;
+  width: auto !important;
+  max-width: 100%;
+  margin: 0 auto !important;
+}
+
+.membership-list li {
+  text-align: start !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* FAQ Section Styles */
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-question {
+  background: transparent;
+  border: none;
+  padding: 20px 24px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-main);
+  text-align: left;
+  transition: var(--transition);
+  cursor: pointer;
+  outline: none;
+}
+
+[dir="rtl"] .faq-question {
+  text-align: right;
+}
+
+.faq-icon {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+}
+
+/* Question Hover: background changes, card scales, text changes to primary color */
+.faq-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.1), 0 8px 10px -6px rgba(13, 148, 136, 0.1);
+}
+
+.faq-question:hover {
+  color: var(--primary);
+}
+
+/* Question Hover triggers dropdown symbol hover: rotates, changes to secondary color */
+.faq-question:hover .faq-icon {
+  color: var(--secondary) !important;
+  transform: scale(1.2);
+}
+
+/* Icon rotation when active / expanded */
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg) scale(1.1);
+  color: var(--primary) !important;
+}
+
+.faq-question[aria-expanded="true"]:hover .faq-icon {
+  color: var(--secondary) !important;
+}
+
+.faq-answer {
+  padding: 0 24px 24px 24px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--border-color);
+  animation: faqFadeIn 0.4s ease;
+}
+
+@keyframes faqFadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Increase about page ethical section image height at 1024px (and up) */
+@media (min-width: 992px) {
+  .ethical-about-img {
+    height: 335px !important;
+    object-fit: cover !important;
+  }
 }
