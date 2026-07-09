@@ -98,4 +98,72 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
         }
     });
+
+    // 6. Dynamic icon replacement from Bootstrap Icons to FontAwesome 6 for a sleek, premium, professional look
+    replaceBootstrapIconsWithFontAwesome();
 });
+
+function replaceBootstrapIconsWithFontAwesome() {
+    const icons = document.querySelectorAll('i[class*="bi-"]');
+    const mapping = {
+        'bi-feather': 'fa-solid fa-feather-pointed',
+        'bi-moon-fill': 'fa-solid fa-moon',
+        'bi-sun-fill': 'fa-solid fa-sun',
+        'bi-list': 'fa-solid fa-bars',
+        'bi-heart-pulse-fill': 'fa-solid fa-heart-pulse',
+        'bi-patch-check-fill': 'fa-solid fa-circle-check',
+        'bi-volume-up-fill': 'fa-solid fa-volume-high',
+        'bi-egg-fill': 'fa-solid fa-egg',
+        'bi-file-earmark-text': 'fa-solid fa-file-invoice',
+        'bi-check-circle-fill': 'fa-solid fa-circle-check',
+        'bi-facebook': 'fa-brands fa-facebook',
+        'bi-instagram': 'fa-brands fa-instagram',
+        'bi-youtube': 'fa-brands fa-youtube',
+        'bi-arrow-up': 'fa-solid fa-arrow-up',
+        'bi-arrow-right': 'fa-solid fa-arrow-right',
+        'bi-clock-history': 'fa-solid fa-clock-rotate-left',
+        'bi-eye-slash-fill': 'fa-solid fa-eye-slash',
+        'bi-eye-fill': 'fa-solid fa-eye',
+        'bi-google': 'fa-brands fa-google',
+        'bi-apple': 'fa-brands fa-apple',
+        'bi-envelope': 'fa-solid fa-envelope',
+        'bi-phone': 'fa-solid fa-phone',
+        'bi-geo-alt': 'fa-solid fa-location-dot',
+        'bi-shield-check': 'fa-solid fa-shield-halved',
+        'bi-star-fill': 'fa-solid fa-star',
+        'bi-search': 'fa-solid fa-magnifying-glass',
+        'bi-info-circle': 'fa-solid fa-circle-info',
+        'bi-plus-circle': 'fa-solid fa-circle-plus',
+        'bi-x-circle': 'fa-solid fa-circle-xmark',
+        'bi-house': 'fa-solid fa-house',
+        'bi-people': 'fa-solid fa-users',
+        'bi-images': 'fa-solid fa-images',
+        'bi-journal-text': 'fa-solid fa-book-open',
+        'bi-chat-dots': 'fa-solid fa-comments',
+        'bi-award': 'fa-solid fa-award',
+        'bi-heart': 'fa-solid fa-heart',
+        'bi-calendar-check': 'fa-solid fa-calendar-check',
+        'bi-activity': 'fa-solid fa-chart-line',
+        'bi-clipboard-pulse': 'fa-solid fa-clipboard-list',
+        'bi-shield-shaded': 'fa-solid fa-shield',
+        'bi-gem': 'fa-solid fa-gem',
+        'bi-percent': 'fa-solid fa-percent',
+        'bi-share': 'fa-solid fa-share-nodes',
+        'bi-twitter': 'fa-brands fa-twitter'
+    };
+
+    icons.forEach(icon => {
+        const classes = Array.from(icon.classList);
+        const biClass = classes.find(c => c.startsWith('bi-'));
+        if (biClass) {
+            let faClass = mapping[biClass];
+            if (!faClass) {
+                // Fallback translation
+                const cleanName = biClass.replace('bi-', '').replace('-fill', '');
+                faClass = `fa-solid fa-${cleanName}`;
+            }
+            icon.classList.remove('bi', biClass);
+            faClass.split(' ').forEach(c => icon.classList.add(c));
+        }
+    });
+}

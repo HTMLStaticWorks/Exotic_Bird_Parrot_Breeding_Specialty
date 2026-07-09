@@ -1,16 +1,12 @@
-/* 
- * Indus Aviary — Exotic Bird & Parrot Breeding Specialty
- * Premium, Modern, Dark Mode Ready, Fully Responsive
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 :root {
   /* Color Palette */
   --primary: #0D9488;
   --primary-hover: #0F766E;
-  --secondary: #D97706;
-  --accent: #F59E0B;
+  --secondary: #0F766E; /* Aligned to primary brand palette (dark teal) */
+  --accent: #0D9488; /* Aligned to primary brand palette (teal) */
   --success: #16A34A;
 
   /* Light Theme Backgrounds */
@@ -27,17 +23,24 @@
   --glass-shadow: 0 8px 32px 0 rgba(28, 25, 23, 0.04);
 
   /* Miscellaneous */
-  --font-family: 'Outfit', sans-serif;
+  --font-headings: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-family: var(--font-body);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --header-height: 80px;
 }
 
 [data-theme="dark"] {
+  --primary: #14B8A6; /* Brightened teal for dark mode contrast */
+  --primary-hover: #2DD4BF; /* Lighter teal hover */
+  --secondary: #2DD4BF; /* Lighter teal */
+  --accent: #14B8A6; /* Brightened teal */
+  
   --bg-main: #1C1917;
   --bg-secondary: #292524;
   --bg-card: #292524;
   --text-main: #F5F5F4;
-  --text-muted: #A8A29E;
+  --text-muted: #D6D3D1; /* Brightened muted text (from #A8A29E) for readability */
   --border-color: #44403C;
 
   --glass-bg: rgba(28, 25, 23, 0.85);
@@ -82,7 +85,7 @@ ul {
 /* Typography System */
 h1,
 .h1 {
-  font-family: var(--font-family);
+  font-family: var(--font-headings);
   font-weight: 580;
   /* Max weight — never 600+ */
   font-size: clamp(3.0rem, 8vw, 4.5rem);
@@ -102,7 +105,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: var(--font-family);
+  font-family: var(--font-headings);
   font-weight: 540;
   /* Max weight — never 600+ */
   font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -122,7 +125,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-headings);
   font-weight: 520;
   /* Max weight — never 600+ */
   font-size: clamp(1.8rem, 4vw, 2.2rem);
@@ -146,7 +149,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: var(--font-family);
+  font-family: var(--font-headings);
   font-weight: 500;
   /* Subheading level */
   font-size: clamp(1.4rem, 3vw, 1.8rem);
@@ -1354,56 +1357,75 @@ footer {
   }
 }
 
-/* Subpages Hero Height Increase overrides */
-.page-about .hero-wrapper {
-  min-height: 900px !important;
+/* Subpages Hero Height overrides - Increased heights for 360px, 768px, 1024px, 1440px viewports */
+.page-about .hero-wrapper,
+.page-care .hero-wrapper,
+.page-adoption .hero-wrapper,
+.page-gallery .hero-wrapper,
+.page-education .hero-wrapper,
+.page-contact .hero-wrapper,
+.page-species-details .hero-wrapper,
+.page-blog-details .hero-wrapper {
+  min-height: 110vh !important; /* Default for desktop and 1024px viewports */
+  padding-top: calc(var(--header-height) + 120px) !important;
+  padding-bottom: 120px !important;
 }
 
-.page-care .hero-wrapper {
-  min-height: 900px !important;
-}
-
-.page-adoption .hero-wrapper {
-  min-height: 900px !important;
-}
-
-.page-gallery .hero-wrapper {
-  min-height: 900px !important;
-}
-
-.page-education .hero-wrapper {
-  min-height: 900px !important;
-}
-
-.page-contact .hero-wrapper {
-  min-height: 900px !important;
-}
-
-/* Decrease hero section height on mobile (360px viewport) */
-@media (max-width: 600px) {
-
+@media (min-width: 1440px) {
   .page-about .hero-wrapper,
   .page-care .hero-wrapper,
   .page-adoption .hero-wrapper,
   .page-gallery .hero-wrapper,
   .page-education .hero-wrapper,
-  .page-contact .hero-wrapper {
-    min-height: 360px !important;
+  .page-contact .hero-wrapper,
+  .page-species-details .hero-wrapper,
+  .page-blog-details .hero-wrapper {
+    min-height: 150vh !important; /* Specific increase for 1440px+ viewports */
   }
 }
 
-/* Subpages Hero Height Increase overrides for Details Pages */
-.page-species-details .hero-wrapper,
-.page-blog-details .hero-wrapper {
-  min-height: 900px !important;
-}
-
-/* Decrease hero section height on mobile (360px viewport) for Details Pages */
-@media (max-width: 600px) {
-
+@media (max-width: 1024px) {
+  .page-about .hero-wrapper,
+  .page-care .hero-wrapper,
+  .page-adoption .hero-wrapper,
+  .page-gallery .hero-wrapper,
+  .page-education .hero-wrapper,
+  .page-contact .hero-wrapper,
   .page-species-details .hero-wrapper,
   .page-blog-details .hero-wrapper {
-    min-height: 360px !important;
+    min-height: 110vh !important; /* Specific override for 1024px */
+    padding-top: calc(var(--header-height) + 100px) !important;
+    padding-bottom: 100px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-about .hero-wrapper,
+  .page-care .hero-wrapper,
+  .page-adoption .hero-wrapper,
+  .page-gallery .hero-wrapper,
+  .page-education .hero-wrapper,
+  .page-contact .hero-wrapper,
+  .page-species-details .hero-wrapper,
+  .page-blog-details .hero-wrapper {
+    min-height: 100vh !important; /* Specific increase for 768px */
+    padding-top: calc(var(--header-height) + 80px) !important;
+    padding-bottom: 80px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-about .hero-wrapper,
+  .page-care .hero-wrapper,
+  .page-adoption .hero-wrapper,
+  .page-gallery .hero-wrapper,
+  .page-education .hero-wrapper,
+  .page-contact .hero-wrapper,
+  .page-species-details .hero-wrapper,
+  .page-blog-details .hero-wrapper {
+    min-height: 95vh !important; /* Specific increase for 360px viewports */
+    padding-top: calc(var(--header-height) + 65px) !important;
+    padding-bottom: 65px !important;
   }
 }
 
@@ -2085,4 +2107,33 @@ section .d-flex:has(> [class*="btn-"]:nth-of-type(2)) > [class*="btn-"] {
     height: 335px !important;
     object-fit: cover !important;
   }
+}
+
+/* Status Color Contrast and Readability Enhancements */
+.text-warning {
+  color: #B45309 !important; /* High contrast amber in light mode */
+}
+
+[data-theme="dark"] .text-warning {
+  color: #FBBF24 !important; /* Bright amber in dark mode */
+}
+
+.text-danger {
+  color: #DC2626 !important; /* High contrast red in light mode */
+}
+
+[data-theme="dark"] .text-danger {
+  color: #F87171 !important; /* Bright red/coral in dark mode */
+}
+
+.text-success {
+  color: #15803D !important; /* High contrast green in light mode */
+}
+
+[data-theme="dark"] .text-success {
+  color: #4ADE80 !important; /* Bright green in dark mode */
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.85) !important; /* Improved contrast for hero descriptions */
 }
